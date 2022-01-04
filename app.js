@@ -7,7 +7,6 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const bodyParser = require('body-parser');
-const cors = require('cors')
 
 const phonesRouter = require('./routes/phones');
 
@@ -40,9 +39,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(cors({
-  origin: [process.env.CLIENT_URL]
-}));
 
 // -- Routes
 
