@@ -8,6 +8,7 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const bodyParser = require('body-parser');
 
+const indexRouter = require('./routes/index');
 const phonesRouter = require('./routes/phones');
 
 const app = express();
@@ -42,6 +43,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // -- Routes
 
+app.use('/', indexRouter);
 app.use('/phones', phonesRouter);
 
 // -- error handlers
