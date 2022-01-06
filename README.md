@@ -2,5 +2,5 @@
 
 ### how to run
 
-1. yarn install or npm install
-2. yarn start
+1. yarn/npm install
+2. yarn/npm start
